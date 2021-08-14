@@ -15,7 +15,8 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
-const CONNECTION_URL = 'mongodb+srv://error:AOS1HMklwk8QYZCS@cluster0.zwkht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+                        //put your connection url here ==> username, password
+const CONNECTION_URL = 'mongodb+srv://{username}:{password}@cluster0.zwkht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
